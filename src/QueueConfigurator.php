@@ -35,7 +35,7 @@ final class QueueConfigurator
                     'exchange'     => $dlxExchange,
                     'routing_keys' => [$dlxRouting],
                     'durable'      => $retryOpts['durable'] ?? true,
-                    'consume'      => true,
+                    'consume'      => false,
                     'arguments'    => [
                         'x-message-ttl'             => $retryOpts['interval'],
                         'x-dead-letter-exchange'    => $baseExchange,
